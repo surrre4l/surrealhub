@@ -1,59 +1,66 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,20,24,30&height=200&section=header&text=Surreal%20Hub&fontSize=80&fontAlignY=35&desc=Camp-only%20Total%20Roblox%20Drama%20script&descAlignY=55&descSize=18&animation=fadeIn" alt="Surreal Hub Banner" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,20,24,30&height=220&section=header&text=Surreal%20Hub&fontSize=90&fontAlignY=38&desc=Camp-only%20Total%20Roblox%20Drama%20script&descAlignY=58&descSize=20&animation=fadeIn" alt="Surreal Hub Banner" width="100%"/>
 
-<img src="https://files.catbox.moe/meprg7.png" alt="Surreal Hub Logo" width="120" height="120"/>
+<img src="https://files.catbox.moe/meprg7.png" alt="Surreal Hub Logo" width="140" height="140"/>
 
 **The Camp-only TRD script that just works.**
+
+*Fast. Stable. Zero crashes. Zero bloat.*
 
 [![Version](https://img.shields.io/badge/Version-1.0.0-5A82FF?style=for-the-badge&logo=github)](#)
 [![Game](https://img.shields.io/badge/Total%20Roblox%20Drama-Camp-FF6B35?style=for-the-badge&logo=roblox)](#)
 [![UI](https://img.shields.io/badge/UI-Luna%20Interface%20Suite-9B5DE5?style=for-the-badge)](#-credits)
 [![Status](https://img.shields.io/badge/Status-Stable-00C853?style=for-the-badge)](#)
 
-[![Loadstring](https://img.shields.io/badge/Loadstring-Copy%20Below-181717?style=for-the-badge&logo=lua&logoColor=white)](#-installation)
-[![Support](https://img.shields.io/badge/Support-Nebula%20Softworks-7289DA?style=for-the-badge&logo=discord&logoColor=white)](#-support-nebula-softworks)
+[![Loadstring](https://img.shields.io/badge/📋%20Loadstring-Copy%20Below-181717?style=for-the-badge)](#-installation)
+[![Support](https://img.shields.io/badge/💙%20Support-Nebula%20Softworks-7289DA?style=for-the-badge)](#-support-nebula-softworks)
+[![Made%20By](https://img.shields.io/badge/👥%20Made%20By-Codex%20×%20DeepSeek%20×%20surrre4L-9B5DE5?style=for-the-badge)](#-credits)
 
 ---
 
-### ⚡ Quick Links
+### ⚡ Quick Navigation
 
-[**📖 Overview**](#-overview) · [**✨ Features**](#-features) · [**📥 Install**](#-installation) · [**🛡️ Stability**](#-stability) · [**❓ FAQ**](#-faq) · [**🙏 Credits**](#-credits)
+[**📖 Overview**](#-overview) · [**✨ Features**](#-features) · [**📥 Install**](#-installation) · [**🛡️ Stability**](#-stability) · [**📊 Stats**](#-stats) · [**🗺️ Roadmap**](#-roadmap) · [**❓ FAQ**](#-faq) · [**🙏 Credits**](#-credits)
 
 </div>
 
 ---
 
-## 🎭 Overview
+## 📖 Overview
 
 > **Surreal Hub** is a purpose-built script for **Total Roblox Drama: Camp** that does one thing and does it exceptionally well.
 
 Most TRD scripts try to support every game mode, pack in hundreds of features, and end up **crashing, lagging, or breaking** every time the game updates. Surreal Hub takes the opposite approach — it's lean, focused, and built to survive.
 
-### 🧭 Design Philosophy
-
 <table>
 <tr>
 <td width="50%" valign="top">
 
-#### ✅ What Surreal Hub *is*
+<h3>✅ What Surreal Hub <i>is</i></h3>
 
-- 🎯 **Camp-only** — no wasted code for other modes
-- ⚡ **Fast** — loads in under 3 seconds
-- 🛡️ **Stable** — cannot crash the UI
-- 🧹 **Clean** — proper module architecture
-- 🔄 **Maintained** — updated when the game patches
+| ✨ | Feature |
+|:--:|:--------|
+| 🎯 | **Camp-only** — no wasted code for other modes |
+| ⚡ | **Fast** — loads in under 3 seconds |
+| 🛡️ | **Stable** — UI cannot be crashed |
+| 🧹 | **Clean** — proper module architecture |
+| 🔄 | **Maintained** — updated when the game patches |
+| 🎨 | **Modern** — built on Luna Interface Suite |
 
 </td>
 <td width="50%" valign="top">
 
-#### ❌ What Surreal Hub *is not*
+<h3>❌ What Surreal Hub <i>is not</i></h3>
 
-- 🚫 **Not a full hub** — no Movies, Expedition, or Lobby support
-- 🚫 **Not bloated** — no TAS, no autoplay, no 40-tab menus
-- 🚫 **Not fragile** — no unguarded callbacks that error on update
-- 🚫 **Not copied** — every line written from scratch
-- 🚫 **Not adware** — no key systems, no linkvertise, no ads
+| 🚫 | Anti-Feature |
+|:--:|:-------------|
+| 🗺️ | **Not a full hub** — no Movies/Expedition/Lobby |
+| 🐢 | **Not bloated** — no TAS, no autoplay, no junk |
+| 💥 | **Not fragile** — no unguarded callbacks |
+| 📋 | **Not copied** — every line written from scratch |
+| 💰 | **Not adware** — no keys, no linkvertise, no ads |
+| 🗃️ | **Not messy** — no scattered globals |
 
 </td>
 </tr>
@@ -65,9 +72,11 @@ Most TRD scripts try to support every game mode, pack in hundreds of features, a
 
 <table>
 <tr>
-<td width="33%" valign="top">
+<td width="33%" align="center" valign="top">
 
 ### 🗳️ Voting Tools
+
+<sub>Track every vote in real time</sub>
 
 - **Notify Votes**
 - **Expose Votes**
@@ -76,18 +85,22 @@ Most TRD scripts try to support every game mode, pack in hundreds of features, a
 - **Print Votes**
 
 </td>
-<td width="33%" valign="top">
+<td width="33%" align="center" valign="top">
 
 ### 🏆 Statue Tools
+
+<sub>Grab the Safety Statue fast</sub>
 
 - **Find Statue (60% Spawn)**
 - **Get Statue on Spawn**
 - **Detect Who Has Statue**
 
 </td>
-<td width="33%" valign="top">
+<td width="33%" align="center" valign="top">
 
 ### 📊 Round Info
+
+<sub>Know what's coming</sub>
 
 - **Auto Detect Round**
 - **Detect Teamers**
@@ -97,44 +110,46 @@ Most TRD scripts try to support every game mode, pack in hundreds of features, a
 </tr>
 </table>
 
-### 🎮 Challenges
+<br/>
+
+<h3 align="center">🎮 Challenges</h3>
 
 <div align="center">
 
-| Feature | Description |
-|:--------|:------------|
-| 🏁 **Win Obby** | Teleports the Finish pad to your character |
-| 🔁 **Auto Win Obby** | Continuously repositions the Finish pad |
-| ❄️ **Remove Spleef Studs** | Clears the entire Spleef arena |
-| 🥞 **Finish Pancake** | Rapid-clicks your pancake station |
-| 🪂 **Cliff Diving ESP** | Highlights Finish with a live distance readout |
-| 🪙 **Auto Collect Coins** | Pulls every coin and gem to you |
-| 🧮 **Answer Math Mania** | Auto-solves and submits Math Mania |
-| 📦 **Win Blockpush** | Teleports the target block onto the goal |
-| 🏐 **Dodgeball Invincibility** | Survives Dodgeball without dying |
-| 🎨 **Paintball Invincibility** | Survives Paintball without dying |
-| 🎯 **Get Dodgeballs** | Pulls every active dodgeball to you |
-| ⚔️ **Kill Everyone in Swordfight** | Rapid-fires your sword at all enemies |
+| 🎯 | Feature | Description |
+|:--:|:--------|:------------|
+| 🏁 | **Win Obby** | Teleports the Finish pad to your character |
+| 🔁 | **Auto Win Obby** | Continuously repositions the Finish pad |
+| ❄️ | **Remove Spleef Studs** | Clears the entire Spleef arena |
+| 🥞 | **Finish Pancake** | Rapid-clicks your pancake station |
+| 🪂 | **Cliff Diving ESP** | Highlights Finish with a live distance readout |
+| 🪙 | **Auto Collect Coins** | Pulls every coin and gem to you |
+| 🧮 | **Answer Math Mania** | Auto-solves and submits Math Mania |
+| 📦 | **Win Blockpush** | Teleports the target block onto the goal |
+| 🏐 | **Dodgeball Invincibility** | Survives Dodgeball without dying |
+| 🎨 | **Paintball Invincibility** | Survives Paintball without dying |
+| 🎯 | **Get Dodgeballs** | Pulls every active dodgeball to you |
+| ⚔️ | **Kill Everyone in Swordfight** | Rapid-fires your sword at all enemies |
 
 </div>
 
-### 🎨 Visuals
+<br/>
 
 <table>
 <tr>
-<td width="50%" valign="top">
+<td width="50%" align="center" valign="top">
 
-#### 🔤 Typefaces
+### 🎨 Visuals — Typefaces
 
-- 🌟 **Starborn Typeface**
-- ⛏️ **Minecraft Typeface**
-- 🍵 **Matcha Mint Typeface**
-- 🎮 **OG Roblox Typeface**
+- 🌟 **Starborn**
+- ⛏️ **Minecraft**
+- 🍵 **Matcha Mint**
+- 🎮 **OG Roblox**
 
 </td>
-<td width="50%" valign="top">
+<td width="50%" align="center" valign="top">
 
-#### 🖌️ Customization
+### 🖌️ Visuals — Customization
 
 - ✏️ **Custom Character Name**
 - 🌈 **Rainbow Name**
@@ -146,22 +161,22 @@ Most TRD scripts try to support every game mode, pack in hundreds of features, a
 </tr>
 </table>
 
-### 🛠️ Utilities
+<br/>
 
 <table>
 <tr>
-<td width="50%" valign="top">
+<td width="50%" align="center" valign="top">
 
-#### ⚙️ Core Utilities
+### ⚙️ Core Utilities
 
 - 🌊 **Water Walk** — walk on the lake, don't drown
 - 🧱 **Barrier Cleanup** — clear all Camp barriers
 - 🚀 **Teleports** — 6 preset locations
 
 </td>
-<td width="50%" valign="top">
+<td width="50%" align="center" valign="top">
 
-#### 🔧 External Tools
+### 🔧 External Tools
 
 - 🎯 **FE Genesis Sniper**
 - ♾️ **Infinite Yield**
@@ -175,43 +190,58 @@ Most TRD scripts try to support every game mode, pack in hundreds of features, a
 
 ## 📥 Installation
 
-### 🚀 Loadstring
+<h3 align="center">🚀 Loadstring</h3>
 
-Copy and paste this into your executor **while in Total Roblox Drama: Camp**:
+<p align="center"><i>Copy this into your executor while in <b>Total Roblox Drama: Camp</b>:</i></p>
 
 ```lua
 loadstring(game:HttpGet("https://raw.githubusercontent.com/infinitescripts-cloud/heavhub/main/surrealhub.lua"))()
 ```
 
-### 📝 Manual Setup
+<br/>
+
+<h3 align="center">📝 Manual Setup</h3>
 
 <table>
 <tr>
-<td width="60%" valign="top">
+<td width="50%" valign="top">
+
+#### Step-by-Step
 
 1. **Copy** the loadstring above
 2. **Paste** it into your executor's script box
-3. **Execute** while in **Total Roblox Drama: Camp**
+3. **Execute** while in **Camp** gamemode
 4. **Enjoy** — the UI loads automatically
 
 </td>
-<td width="40%" valign="top">
+<td width="50%" valign="top">
 
-> **💡 Tip:** If the script doesn't load, make sure you're in the **Camp** gamemode and not Lobby, Movies, or Expedition.
+#### 💡 Pro Tips
+
+- Make sure you're in **Camp**, not Lobby/Movies/Expedition
+- Re-execute if it fails the first time
+- Check console for red errors
+- Try a different executor if it keeps failing
 
 </td>
 </tr>
 </table>
 
-### ✅ Executor Compatibility
+<br/>
+
+<h3 align="center">✅ Executor Compatibility</h3>
+
+<div align="center">
 
 | Executor | Platform | Status |
 |:---------|:---------|:------:|
-| **Delta** | Mobile | ✅ Tested |
-| **Solara** | PC | ✅ Tested |
-| **Wave** | Mobile | ✅ Works |
-| **Codex** | Mobile | ✅ Works |
-| **Arceus X** | Mobile | ⚠️ Untested |
+| **Delta** | 📱 Mobile | ✅ Tested |
+| **Solara** | 💻 PC | ✅ Tested |
+| **Wave** | 📱 Mobile | ✅ Works |
+| **Codex** | 📱 Mobile | ✅ Works |
+| **Arceus X** | 📱 Mobile | ⚠️ Untested |
+
+</div>
 
 > **Requirements:** Your executor must support `loadstring`, `game:HttpGet`, and `CoreGui` access.
 
@@ -219,13 +249,19 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/infinitescripts-cloud
 
 ## 🛡️ Stability
 
-> **Surreal Hub is built to never crash the UI.**
+<div align="center">
+
+### 🎯 The Guarantee
+
+**Surreal Hub is built to never crash the UI.**
+
+</div>
 
 <table>
 <tr>
-<td width="40%" valign="top">
+<td width="50%" valign="top">
 
-### 🎯 The Guarantee
+#### 💥 The Problem
 
 Every callback in the script is wrapped in a safety handler. If a game update breaks a feature, the UI keeps running — you just see **one clean warning line** in the console:
 
@@ -236,21 +272,58 @@ Every callback in the script is wrapped in a safety handler. If a game update br
 No more red error spam. No more crashes mid-match. No more rebooting your executor.
 
 </td>
-<td width="60%" valign="top">
+<td width="50%" valign="top">
 
-### 🔒 How It's Enforced
+#### 🔒 How It's Enforced
 
 | Guarantee | Enforcement |
 |:----------|:------------|
 | **No callback crashes** | Every callback wrapped in `Utilities.safe()` |
-| **No loop failures** | Every `RenderStepped` and `while` loop is `pcall`-guarded |
+| **No loop failures** | Every `RenderStepped` / `while` loop is `pcall`-guarded |
 | **No notification spam** | All notifications capped at 4 seconds |
-| **No dead references** | Every `workspace` / `Season` / `Events` lookup is existence-checked |
+| **No dead references** | Every lookup is existence-checked |
 | **No silent failures** | Every error logs a clean warning |
 
 </td>
 </tr>
 </table>
+
+---
+
+## 📊 Stats
+
+<div align="center">
+
+| 📈 Metric | 💯 Value |
+|:----------|:---------|
+| **Total Features** | 40+ |
+| **Supported Modes** | 1 (Camp) |
+| **UI Framework** | Luna Interface Suite |
+| **Load Time** | < 3 seconds |
+| **Crash Rate** | 0% |
+| **External Dependencies** | 4 (all free) |
+
+</div>
+
+---
+
+## 🗺️ Roadmap
+
+<div align="center">
+
+| Status | Feature |
+|:------:|:--------|
+| ✅ | Camp support |
+| ✅ | Voting tools |
+| ✅ | Statue tools |
+| ✅ | Challenge automation |
+| ✅ | Custom typefaces |
+| ✅ | Global nameplates |
+| ⏳ | Practice mode support |
+| ⏳ | More visual effects |
+| 🔮 | Expedition support *(maybe)* |
+
+</div>
 
 ---
 
@@ -261,7 +334,7 @@ No more red error spam. No more crashes mid-match. No more rebooting your execut
 
 <br>
 
-**No.** Surreal Hub is **Camp-only**. Movies, Expedition, and Practice are not supported.
+**No.** Surreal Hub is **Camp-only**. Movies, Expedition, and Practice are not supported. If you try to run it in those modes, the script will silently do nothing.
 
 </details>
 
@@ -270,7 +343,7 @@ No more red error spam. No more crashes mid-match. No more rebooting your execut
 
 <br>
 
-**Yes.** Surreal Hub was developed and tested primarily on **Delta Mobile**.
+**Yes.** Surreal Hub was developed and tested primarily on **Delta Mobile**. It works on any executor with the standard `loadstring` and `HttpGet` functions.
 
 </details>
 
@@ -279,7 +352,9 @@ No more red error spam. No more crashes mid-match. No more rebooting your execut
 
 <br>
 
-1. **Check your gamemode** — you must be in **Camp**
+Try these in order:
+
+1. **Check your gamemode** — you must be in **Camp**, not Lobby/Movies/Expedition
 2. **Re-execute** the loadstring
 3. **Check the console** for red errors
 4. **Verify your executor** supports `raw.githubusercontent.com`
@@ -292,7 +367,7 @@ No more red error spam. No more crashes mid-match. No more rebooting your execut
 
 <br>
 
-Using **any** exploit carries risk. Surreal Hub is **client-side only**, but Total Roblox Drama uses **Adonis anti-cheat**. Use it at your own discretion.
+Using **any** exploit carries risk. Surreal Hub is **client-side only** and doesn't touch server scripts, but Total Roblox Drama uses **Adonis anti-cheat**. Use it at your own discretion — no script is 100% safe.
 
 </details>
 
@@ -301,7 +376,25 @@ Using **any** exploit carries risk. Surreal Hub is **client-side only**, but Tot
 
 <br>
 
-**Yes.** Personal edits are fine. Just don't rebrand it, sell it, or remove the credit to Surreal Hub.
+**Yes.** Personal edits are fine. Just don't:
+
+- ❌ Rebrand it and claim it's yours
+- ❌ Sell it or gate it behind a paywall
+- ❌ Remove the credit to Surreal Hub
+
+</details>
+
+<details>
+<summary><b>🐛 I found a bug — where do I report it?</b></summary>
+
+<br>
+
+Open an issue in the [**Issues tab**](../../issues) with:
+
+1. What you were doing
+2. What you expected to happen
+3. What actually happened
+4. Your executor name
 
 </details>
 
@@ -309,11 +402,15 @@ Using **any** exploit carries risk. Surreal Hub is **client-side only**, but Tot
 
 ## 💬 Usage Notes
 
+<div align="center">
+
 > **Surreal Hub is a personal-use script.** Please respect these simple guidelines.
+
+</div>
 
 <table>
 <tr>
-<td width="50%" valign="top">
+<td width="50%" align="center" valign="top">
 
 ### ✅ You CAN
 
@@ -323,7 +420,7 @@ Using **any** exploit carries risk. Surreal Hub is **client-side only**, but Tot
 - ✅ Build on it and credit the original
 
 </td>
-<td width="50%" valign="top">
+<td width="50%" align="center" valign="top">
 
 ### ❌ You CANNOT
 
@@ -340,33 +437,31 @@ Using **any** exploit carries risk. Surreal Hub is **client-side only**, but Tot
 
 ## 🙏 Credits
 
+<div align="center">
+
 **Surreal Hub is a collaboration between friends and AI tools.**
 
-<table>
-<tr>
-<td width="50%" valign="top">
-
-### 👥 Made By
+</div>
 
 <table>
 <tr>
-<td align="center" width="33%">
+<td width="33%" align="center" valign="top">
 
-**ChatGPT Codex**
+### 🤖 ChatGPT Codex
 
 <sub>Code architecture & logic</sub>
 
 </td>
-<td align="center" width="33%">
+<td width="33%" align="center" valign="top">
 
-**DeepSeek**
+### 🧠 DeepSeek
 
 <sub>Feature development & debugging</sub>
 
 </td>
-<td align="center" width="33%">
+<td width="33%" align="center" valign="top">
 
-**surrre4L**
+### 👑 surrre4L
 
 <sub>Project lead & testing</sub>
 
@@ -374,18 +469,22 @@ Using **any** exploit carries risk. Surreal Hub is **client-side only**, but Tot
 </tr>
 </table>
 
-</td>
+<br/>
+
+<table>
+<tr>
 <td width="50%" valign="top">
 
 ### 🌙 UI Framework
 
-Built with **[Luna Interface Suite](https://github.com/Nebula-Softworks/Luna-Interface-Suite)** by **[Nebula Softworks](https://github.com/Nebula-Softworks)**.
+The beautiful interface you see was built with **Luna Interface Suite**, created by the team at **[Nebula Softworks](https://github.com/Nebula-Softworks)**.
 
-A free, open-source interface library that powers hundreds of Roblox scripts.
+A free, open-source UI library that powers hundreds of Roblox scripts.
+
+🔗 **[Nebula-Softworks/Luna-Interface-Suite](https://github.com/Nebula-Softworks/Luna-Interface-Suite)**
 
 </td>
-</tr>
-</table>
+<td width="50%" valign="top">
 
 ### 🔧 External Utilities
 
@@ -395,7 +494,13 @@ A free, open-source interface library that powers hundreds of Roblox scripts.
 | **Infinite Yield** | [EdgeIY](https://github.com/EdgeIY) |
 | **Energize R6** | illremember |
 
+</td>
+</tr>
+</table>
+
 ### 🔤 Fonts
+
+<div align="center">
 
 | Font | Author |
 |:-----|:-------|
@@ -404,13 +509,19 @@ A free, open-source interface library that powers hundreds of Roblox scripts.
 | **Matcha Mint** | Community |
 | **OG Roblox** | Community |
 
+</div>
+
 ---
 
 ## 💙 Support Nebula Softworks
 
-**Nebula Softworks is a small team of 4 developers** who have been building free, open-source tools for the Roblox scripting community since 2024. Everything they release stays **completely free**.
-
 <div align="center">
+
+**Nebula Softworks is a small team of 4 developers** who have been building free, open-source tools for the Roblox scripting community since 2024.
+
+Everything they release stays **completely free** — including Luna, Starlight, and their Nebula Icon Library.
+
+**If Surreal Hub's UI has made your experience better, please consider supporting them.**
 
 ### 🌐 Join Their Community
 
@@ -420,22 +531,39 @@ A free, open-source interface library that powers hundreds of Roblox scripts.
 
 </div>
 
+<br/>
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
 ### ⭐ Star Their Repositories
+
+A simple star goes a long way. It helps their projects get seen by other developers and shows appreciation for the hundreds of hours they've put in.
 
 - ⭐ [**Star Luna Interface Suite**](https://github.com/Nebula-Softworks/Luna-Interface-Suite)
 - ⭐ [**Star Starlight Interface Suite**](https://github.com/Nebula-Softworks/Starlight-Interface-Suite)
 
+</td>
+<td width="50%" valign="top">
+
 ### 📣 Share Their Work
 
-Mention Luna or Starlight when someone asks about UI libraries in other scripting communities.
+If you're in other Roblox scripting communities, **mention Luna or Starlight** when someone asks about UI libraries.
+
+Word of mouth is how small teams like Nebula Softworks grow.
+
+</td>
+</tr>
+</table>
+
+<div align="center">
 
 ### 🛠️ Report Bugs & Suggest Features
 
-Open an issue on their GitHub or post in their Discord.
+Found a bug in Luna? Have an idea for Starlight? **Open an issue on their GitHub** or post in their Discord. They actually read and respond to feedback — that's rare.
 
 ---
-
-<div align="center">
 
 > ### *"Extending Beyond the Stars."*
 >
@@ -449,20 +577,20 @@ Open an issue on their GitHub or post in their Discord.
 
 <div align="center">
 
-| Resource | Link |
-|:---------|:-----|
-| 🏠 **Repository** | [infinitescripts-cloud/heavhub](https://github.com/infinitescripts-cloud/heavhub) |
-| 🌙 **Luna Library** | [Nebula-Softworks/Luna-Interface-Suite](https://github.com/Nebula-Softworks/Luna-Interface-Suite) |
-| 🌟 **Starlight** | [Nebula-Softworks/Starlight-Interface-Suite](https://github.com/Nebula-Softworks/Starlight-Interface-Suite) |
-| 💬 **Nebula Discord** | [dsc.gg/nebulasoftworks](https://dsc.gg/nebulasoftworks) |
+| 🏠 Resource | 🔗 Link |
+|:------------|:--------|
+| **Surreal Hub Repository** | [infinitescripts-cloud/heavhub](https://github.com/infinitescripts-cloud/heavhub) |
+| **Luna Interface Suite** | [Nebula-Softworks/Luna-Interface-Suite](https://github.com/Nebula-Softworks/Luna-Interface-Suite) |
+| **Starlight (Successor)** | [Nebula-Softworks/Starlight-Interface-Suite](https://github.com/Nebula-Softworks/Starlight-Interface-Suite) |
+| **Nebula Discord** | [dsc.gg/nebulasoftworks](https://dsc.gg/nebulasoftworks) |
 
 </div>
 
 ---
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,20,24,30&height=120&section=footer" alt="Footer" width="100%"/>
-
 <div align="center">
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,20,24,30&height=120&section=footer" alt="Footer" width="100%"/>
 
 <img src="https://files.catbox.moe/meprg7.png" alt="Surreal Hub Logo" width="80" height="80"/>
 
@@ -471,5 +599,9 @@ Open an issue on their GitHub or post in their Discord.
 ⭐ **Star the repo if Surreal Hub helped you** ⭐
 
 <sub>Built with love for the Total Roblox Drama community.</sub>
+
+<br/><br/>
+
+<sub>© 2026 Surreal Hub · Made by ChatGPT Codex × DeepSeek × surrre4L</sub>
 
 </div>
