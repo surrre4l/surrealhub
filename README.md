@@ -1,8 +1,8 @@
 <div align="center">
 
-<img src="logo.png" alt="Surreal Hub Logo" width="160" height="160"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,20,24,30&height=200&section=header&text=Surreal%20Hub&fontSize=80&fontAlignY=35&desc=Camp-only%20Total%20Roblox%20Drama%20script&descAlignY=55&descSize=18&animation=fadeIn" alt="Surreal Hub Banner" width="100%"/>
 
-# Surreal Hub
+<img src="https://files.catbox.moe/meprg7.png" alt="Surreal Hub Logo" width="120" height="120"/>
 
 **The Camp-only TRD script that just works.**
 
@@ -52,7 +52,7 @@ Most TRD scripts try to support every game mode, pack in hundreds of features, a
 - 🚫 **Not a full hub** — no Movies, Expedition, or Lobby support
 - 🚫 **Not bloated** — no TAS, no autoplay, no 40-tab menus
 - 🚫 **Not fragile** — no unguarded callbacks that error on update
-- 🚫 **Not original code** — every line written from scratch
+- 🚫 **Not copied** — every line written from scratch
 - 🚫 **Not adware** — no key systems, no linkvertise, no ads
 
 </td>
@@ -261,7 +261,7 @@ No more red error spam. No more crashes mid-match. No more rebooting your execut
 
 <br>
 
-**No.** Surreal Hub is **Camp-only**. Movies, Expedition, and Practice are not supported. If you try to run it in those modes, the script will silently do nothing.
+**No.** Surreal Hub is **Camp-only**. Movies, Expedition, and Practice are not supported.
 
 </details>
 
@@ -270,7 +270,7 @@ No more red error spam. No more crashes mid-match. No more rebooting your execut
 
 <br>
 
-**Yes.** Surreal Hub was developed and tested primarily on **Delta Mobile**. It works on any executor with the standard `loadstring` and `HttpGet` functions.
+**Yes.** Surreal Hub was developed and tested primarily on **Delta Mobile**.
 
 </details>
 
@@ -279,9 +279,7 @@ No more red error spam. No more crashes mid-match. No more rebooting your execut
 
 <br>
 
-Try these in order:
-
-1. **Check your gamemode** — you must be in **Camp**, not Lobby/Movies/Expedition
+1. **Check your gamemode** — you must be in **Camp**
 2. **Re-execute** the loadstring
 3. **Check the console** for red errors
 4. **Verify your executor** supports `raw.githubusercontent.com`
@@ -294,7 +292,7 @@ Try these in order:
 
 <br>
 
-Using **any** exploit carries risk. Surreal Hub is **client-side only** and doesn't touch server scripts, but Total Roblox Drama uses **Adonis anti-cheat**. Use it at your own discretion — no script is 100% safe.
+Using **any** exploit carries risk. Surreal Hub is **client-side only**, but Total Roblox Drama uses **Adonis anti-cheat**. Use it at your own discretion.
 
 </details>
 
@@ -303,25 +301,7 @@ Using **any** exploit carries risk. Surreal Hub is **client-side only** and does
 
 <br>
 
-**Yes.** Personal edits are fine. Just don't:
-
-- ❌ Rebrand it and claim it's yours
-- ❌ Sell it or gate it behind a paywall
-- ❌ Remove the credit to Surreal Hub
-
-</details>
-
-<details>
-<summary><b>🐛 I found a bug — where do I report it?</b></summary>
-
-<br>
-
-Open an issue in the [**Issues tab**](../../issues) with:
-
-1. What you were doing
-2. What you expected to happen
-3. What actually happened
-4. Your executor name
+**Yes.** Personal edits are fine. Just don't rebrand it, sell it, or remove the credit to Surreal Hub.
 
 </details>
 
@@ -409,8 +389,6 @@ A free, open-source interface library that powers hundreds of Roblox scripts.
 
 ### 🔧 External Utilities
 
-These tools are loaded as separate scripts when you click their buttons:
-
 | Tool | Author |
 |:-----|:-------|
 | **Genesis Sniper** | [GenesisFE](https://github.com/GenesisFE) |
@@ -430,15 +408,11 @@ These tools are loaded as separate scripts when you click their buttons:
 
 ## 💙 Support Nebula Softworks
 
-**Nebula Softworks is a small team of 4 developers** who have been building free, open-source tools for the Roblox scripting community since 2024. Everything they release stays **completely free** — including Luna, Starlight, and their Nebula Icon Library.
-
-If Surreal Hub's UI has made your experience better, **please consider supporting them.**
+**Nebula Softworks is a small team of 4 developers** who have been building free, open-source tools for the Roblox scripting community since 2024. Everything they release stays **completely free**.
 
 <div align="center">
 
 ### 🌐 Join Their Community
-
-The best way to support them is to **join their Discord**. Every new member helps their community grow.
 
 [![Discord](https://img.shields.io/badge/Discord-dsc.gg%2Fnebulasoftworks-7289DA?style=for-the-badge&logo=discord&logoColor=white)](https://dsc.gg/nebulasoftworks)
 [![GitHub](https://img.shields.io/badge/GitHub-Nebula--Softworks-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Nebula-Softworks)
@@ -448,18 +422,16 @@ The best way to support them is to **join their Discord**. Every new member help
 
 ### ⭐ Star Their Repositories
 
-A simple star goes a long way. It helps their projects get seen by other developers and shows appreciation for the hundreds of hours they've put in.
-
 - ⭐ [**Star Luna Interface Suite**](https://github.com/Nebula-Softworks/Luna-Interface-Suite)
 - ⭐ [**Star Starlight Interface Suite**](https://github.com/Nebula-Softworks/Starlight-Interface-Suite)
 
 ### 📣 Share Their Work
 
-If you're in other Roblox scripting communities, **mention Luna or Starlight** when someone asks about UI libraries. Word of mouth is how small teams like Nebula Softworks grow.
+Mention Luna or Starlight when someone asks about UI libraries in other scripting communities.
 
 ### 🛠️ Report Bugs & Suggest Features
 
-Found a bug in Luna? Have an idea for Starlight? **Open an issue on their GitHub** or post in their Discord. They actually read and respond to feedback — that's rare.
+Open an issue on their GitHub or post in their Discord.
 
 ---
 
@@ -481,16 +453,18 @@ Found a bug in Luna? Have an idea for Starlight? **Open an issue on their GitHub
 |:---------|:-----|
 | 🏠 **Repository** | [infinitescripts-cloud/heavhub](https://github.com/infinitescripts-cloud/heavhub) |
 | 🌙 **Luna Library** | [Nebula-Softworks/Luna-Interface-Suite](https://github.com/Nebula-Softworks/Luna-Interface-Suite) |
-| 🌟 **Starlight (Successor)** | [Nebula-Softworks/Starlight-Interface-Suite](https://github.com/Nebula-Softworks/Starlight-Interface-Suite) |
+| 🌟 **Starlight** | [Nebula-Softworks/Starlight-Interface-Suite](https://github.com/Nebula-Softworks/Starlight-Interface-Suite) |
 | 💬 **Nebula Discord** | [dsc.gg/nebulasoftworks](https://dsc.gg/nebulasoftworks) |
 
 </div>
 
 ---
 
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,20,24,30&height=120&section=footer" alt="Footer" width="100%"/>
+
 <div align="center">
 
-<img src="logo.png" alt="Surreal Hub Logo" width="100" height="100"/>
+<img src="https://files.catbox.moe/meprg7.png" alt="Surreal Hub Logo" width="80" height="80"/>
 
 ### 🎭 Made for Camp. Built to last.
 
