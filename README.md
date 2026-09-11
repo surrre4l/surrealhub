@@ -1,6 +1,8 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,20,24,30&height=200&section=header&text=Surreal%20Hub&fontSize=80&fontAlignY=35&desc=Camp-only%20Total%20Roblox%20Drama%20script&descAlignY=55&descSize=18&animation=fadeIn" alt="Surreal Hub Banner" width="100%"/>
+<img src="logo.png" alt="Surreal Hub Logo" width="160" height="160"/>
+
+# Surreal Hub
 
 **The Camp-only TRD script that just works.**
 
@@ -47,10 +49,10 @@ Most TRD scripts try to support every game mode, pack in hundreds of features, a
 
 #### ❌ What Surreal Hub *is not*
 
-- 🚫 **Not a hub** — no Movies, Expedition, or Lobby support
+- 🚫 **Not a full hub** — no Movies, Expedition, or Lobby support
 - 🚫 **Not bloated** — no TAS, no autoplay, no 40-tab menus
 - 🚫 **Not fragile** — no unguarded callbacks that error on update
-- 🚫 **Not skidded** — no copied code, no DramaWare leftovers
+- 🚫 **Not original code** — every line written from scratch
 - 🚫 **Not adware** — no key systems, no linkvertise, no ads
 
 </td>
@@ -358,43 +360,71 @@ Open an issue in the [**Issues tab**](../../issues) with:
 
 ## 🙏 Credits
 
-**Surreal Hub would not exist without the incredible work of others.**
+**Surreal Hub is a collaboration between friends and AI tools.**
 
 <table>
 <tr>
 <td width="50%" valign="top">
 
-### 🌙 Luna Interface Suite
+### 👥 Made By
 
-The beautiful UI you see was built with **Luna**, created by the team at **[Nebula Softworks](https://github.com/Nebula-Softworks)**.
+<table>
+<tr>
+<td align="center" width="33%">
 
-Luna is a free, open-source interface library that powers hundreds of Roblox scripts across the community.
+**ChatGPT Codex**
 
-**🔗 [Nebula-Softworks/Luna-Interface-Suite](https://github.com/Nebula-Softworks/Luna-Interface-Suite)**
+<sub>Code architecture & logic</sub>
 
-> **Note:** Luna was officially discontinued in April 2025 and is being replaced by **[Starlight](https://github.com/Nebula-Softworks/Starlight-Interface-Suite)**. It remains fully usable and Nebula may still push occasional maintenance updates.
+</td>
+<td align="center" width="33%">
+
+**DeepSeek**
+
+<sub>Feature development & debugging</sub>
+
+</td>
+<td align="center" width="33%">
+
+**surrre4L**
+
+<sub>Project lead & testing</sub>
+
+</td>
+</tr>
+</table>
 
 </td>
 <td width="50%" valign="top">
+
+### 🌙 UI Framework
+
+Built with **[Luna Interface Suite](https://github.com/Nebula-Softworks/Luna-Interface-Suite)** by **[Nebula Softworks](https://github.com/Nebula-Softworks)**.
+
+A free, open-source interface library that powers hundreds of Roblox scripts.
+
+</td>
+</tr>
+</table>
 
 ### 🔧 External Utilities
 
 These tools are loaded as separate scripts when you click their buttons:
 
-- **Genesis Sniper** — by [GenesisFE](https://github.com/GenesisFE)
-- **Infinite Yield** — by [EdgeIY](https://github.com/EdgeIY)
-- **Energize R6** — by illremember
+| Tool | Author |
+|:-----|:-------|
+| **Genesis Sniper** | [GenesisFE](https://github.com/GenesisFE) |
+| **Infinite Yield** | [EdgeIY](https://github.com/EdgeIY) |
+| **Energize R6** | illremember |
 
 ### 🔤 Fonts
 
-- **Starborn** — by Darrell Flood
-- **Minecrafter** — by Madpixel Designs
-- **Matcha Mint** — by its creator
-- **OG Roblox** — by its creator
-
-</td>
-</tr>
-</table>
+| Font | Author |
+|:-----|:-------|
+| **Starborn** | Darrell Flood |
+| **Minecrafter** | Madpixel Designs |
+| **Matcha Mint** | Community |
+| **OG Roblox** | Community |
 
 ---
 
@@ -458,9 +488,9 @@ Found a bug in Luna? Have an idea for Starlight? **Open an issue on their GitHub
 
 ---
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,20,24,30&height=120&section=footer" alt="Footer" width="100%"/>
-
 <div align="center">
+
+<img src="logo.png" alt="Surreal Hub Logo" width="100" height="100"/>
 
 ### 🎭 Made for Camp. Built to last.
 
