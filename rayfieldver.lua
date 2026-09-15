@@ -1730,45 +1730,15 @@ UtilitiesTab:CreateButton({
     description = "kills Rayfield UI and loads the Luna build",
     icon = "rbxassetid://10734950309",
     callback = Utilities.safe(function()
-        -- 1. Destroy Rayfield's UI (targeted only)
-pcall(function()
-    -- Only these exact names are destroyed
-    local TARGET_NAMES = {
-        "Surreal Hub (Camp)",
-        "Rayfield",
-        "RayfieldUI",
-        "RayfieldInterface",
-        "RayfieldGen2",
-        "rf-gen2",
-        "SurrealHub",
-        "Surreal Hub",
-    }
+        -- 1. Destroy Rayfield's UI
+        pcall(function()
+            Rayfield:Destroy()
+        end)
 
-    local parents = {}
-    local function add(p) if p then table.insert(parents, p) end end
-
-    add(game:GetService("CoreGui"))
-    add(LocalPlayer:FindFirstChild("PlayerGui"))
-    pcall(function() add(gethui and gethui()) end)
-
-    local destroyed = 0
-    for _, parent in ipairs(parents) do
-        for _, target in ipairs(TARGET_NAMES) do
-            local gui = parent:FindFirstChild(target)
-            if gui and (gui:IsA("ScreenGui") or gui:IsA("Folder")) then
-                gui:Destroy()
-                destroyed = destroyed + 1
-            end
-        end
-    end
-
-    print("[Surreal Hub] Destroyed " .. destroyed .. " Rayfield GUI(s)")
-end)
-
-        -- 2. Brief delay before loading Luna
+        -- 2. Brief delay
         task.wait(0.5)
 
-        -- 3. Load the Luna version (cache-busted)
+        -- 3. Load the Luna version
         local LUNA_URL = "https://raw.githubusercontent.com/surrre4l/surrealhub/main/surrealhub.lua?v=" .. os.time()
 
         task.spawn(function()
@@ -1783,9 +1753,6 @@ end)
             end)
             if not ok then
                 warn("[Surreal Hub] Failed to load Luna version: " .. tostring(err))
-                pcall(function()
-                    Utilities.notify("Luna Failed", tostring(err), 5)
-                end)
             end
         end)
     end),
