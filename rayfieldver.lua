@@ -1729,10 +1729,10 @@ UtilitiesTab:CreateButton({
     name = "Execute Luna Version",
     description = "kills Rayfield UI and loads the Luna build",
     icon = "rbxassetid://10734950309",
-    callback = Utilities.safe(function()
-        -- 1. Destroy Rayfield's UI
+    callback = function()
+        -- 1. Unload Rayfield
         pcall(function()
-            Rayfield:Destroy()
+            Rayfield:Unload()
         end)
 
         -- 2. Brief delay
@@ -1755,7 +1755,7 @@ UtilitiesTab:CreateButton({
                 warn("[Surreal Hub] Failed to load Luna version: " .. tostring(err))
             end
         end)
-    end),
+    end,
 })
 
 --==================================================
