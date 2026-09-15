@@ -1723,49 +1723,25 @@ UtilitiesTab:CreateButton({
     callback = Utilities.safe(function() Utilities.launchUtility("energize") end),
 })
 
+UtilitiesTab:CreateSection({ name = "Interface" })
+
 UtilitiesTab:CreateButton({
     name = "Execute Luna Version",
     description = "kills Rayfield UI and loads the Luna build",
     icon = "rbxassetid://10734950309",
     callback = function()
-        -- 1. Try Unload (may error — that's fine)
-        pcall(function() Rayfield:Unload() end)
-        task.wait(0.2)
-
-        -- 2. Find Rayfield's ScreenGui by looking for its internal markers
-        local parents = { game:GetService("CoreGui") }
-        pcall(function() table.insert(parents, gethui()) end)
-        local pg = game.Players.LocalPlayer:FindFirstChild("PlayerGui")
-        if pg then table.insert(parents, pg) end
-
-        for _, parent in ipairs(parents) do
-            if parent then
-                for _, gui in ipairs(parent:GetChildren()) do
-                    if gui:IsA("ScreenGui") then
-                        -- Rayfield's UI has these internal children
-                        if gui:FindFirstChild("Topbar", true)
-                        or gui:FindFirstChild("ElementIndicator", true)
-                        or gui:FindFirstChild("Sidebar", true) then
-                            gui:Destroy()
-                        end
-                    end
-                end
-            end
+        -- Unload via the Window object
+        if Window and Window.Unload then
+            pcall(function()
+                Window:Unload()
+            end)
         end
 
-        -- 3. Load Luna
         task.wait(0.3)
-        local LUNA_URL = "https://raw.githubusercontent.com/surrre4l/surrealhub/main/surrealhub.lua?v=" .. os.time()
-        task.spawn(function()
-            local ok, err = pcall(function()
-                local src = game:HttpGet(LUNA_URL, true)
-                if not src or #src < 100 then error("Empty response") end
-                local fn = loadstring(src)
-                if not fn then error("loadstring returned nil") end
-                fn()
-            end)
-            if not ok then warn("[Surreal Hub] Failed: " .. tostring(err)) end
-        end)
+
+        loadstring(game:HttpGet(
+            "https://raw.githubusercontent.com/surrre4l/surrealhub/main/surrealhub.lua"
+        ))()
     end,
 })
 
