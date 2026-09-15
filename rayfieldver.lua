@@ -1732,14 +1732,12 @@ UtilitiesTab:CreateButton({
     callback = Utilities.safe(function()
         -- 1. Destroy Rayfield's UI
         pcall(function()
-            local WIN_NAME = "Surreal Hub (Camp)" -- matches Rayfield window name
+            local WIN_NAME = "Surreal Hub (Camp)"
             local names = {
                 WIN_NAME,
                 "Rayfield", "RayfieldUI", "RayfieldInterface",
                 "SurrealHub", "Surreal Hub"
             }
-
-            -- Collect every plausible parent
             local parents = {}
             local function add(p) if p then table.insert(parents, p) end end
 
@@ -1749,31 +1747,23 @@ UtilitiesTab:CreateButton({
             add(workspace)
             add(game:GetService("Chat"))
 
-            -- Walk every ScreenGui / Folder and match by name/pattern
             for _, parent in ipairs(parents) do
                 for _, child in ipairs(parent:GetChildren()) do
                     if child:IsA("ScreenGui") or child:IsA("Folder") then
                         local n = child.Name:lower()
-                        local match =
-                            child.Name == WIN_NAME or
-                            n:find("rayfield", 1, true) or
-                            n:find("surreal", 1, true)
-                        if match then
+                        if child.Name == WIN_NAME
+                           or n:find("rayfield", 1, true)
+                           or n:find("surreal", 1, true) then
                             child:Destroy()
                         end
                     end
                 end
-            end
-
-            -- Named fallback
-            for _, parent in ipairs(parents) do
                 for _, name in ipairs(names) do
                     local gui = parent:FindFirstChild(name)
                     if gui then gui:Destroy() end
                 end
             end
 
-            -- Clear Rayfield's global so it can't re-show
             if getgenv then
                 pcall(function()
                     local env = getgenv()
@@ -1782,25 +1772,22 @@ UtilitiesTab:CreateButton({
             end
         end)
 
-        -- 2. Small delay before loading Luna
+        -- 2. Brief delay before loading Luna
         task.wait(0.5)
 
-        -- 3. Load the Luna version
-        local LUNA_URL = "https://raw.githubusercontent.com/infinitescripts-cloud/Luna-Interface-Suite/master/LunaUI_inputs_full_click.lua"
+        -- 3. Load the Luna version (cache-busted)
+        local LUNA_URL = "https://raw.githubusercontent.com/surrre4l/surrealhub/main/surrealhub.lua?v=" .. os.time()
 
         task.spawn(function()
             local ok, err = pcall(function()
                 local src = game:HttpGet(LUNA_URL, true)
-                if not src or #src < 500 then
+                if not src or #src < 100 then
                     error("Empty or invalid Luna source (" .. tostring(src and #src or 0) .. " bytes)")
                 end
                 local fn = loadstring(src)
-                if not fn then
-                    error("loadstring returned nil")
-                end
+                if not fn then error("loadstring returned nil") end
                 fn()
             end)
-
             if not ok then
                 warn("[Surreal Hub] Failed to load Luna version: " .. tostring(err))
                 pcall(function()
