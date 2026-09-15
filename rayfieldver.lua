@@ -1730,16 +1730,18 @@ UtilitiesTab:CreateButton({
     description = "kills Rayfield UI and loads the Luna build",
     icon = "rbxassetid://10734950309",
     callback = Utilities.safe(function()
-        -- 1. Destroy Rayfield's UI (aggressive)
+        -- 1. Destroy Rayfield's UI (targeted only)
 pcall(function()
-    -- Roblox defaults we MUST NOT destroy
-    local whitelist = {
-        Chat = true, RobloxGui = true, BubbleChat = true,
-        PlayerList = true, Backpack = true,
-        ["RobloxLoadingScreen"] = true,
-        ["TeleportGui"] = true,
-        ["PurchasePrompt"] = true,
-        ["RobloxPromptGui"] = true,
+    -- Only these exact names are destroyed
+    local TARGET_NAMES = {
+        "Surreal Hub (Camp)",
+        "Rayfield",
+        "RayfieldUI",
+        "RayfieldInterface",
+        "RayfieldGen2",
+        "rf-gen2",
+        "SurrealHub",
+        "Surreal Hub",
     }
 
     local parents = {}
@@ -1748,47 +1750,19 @@ pcall(function()
     add(game:GetService("CoreGui"))
     add(LocalPlayer:FindFirstChild("PlayerGui"))
     pcall(function() add(gethui and gethui()) end)
-    add(workspace)
-    add(game:GetService("Chat"))
 
     local destroyed = 0
     for _, parent in ipairs(parents) do
-        for _, child in ipairs(parent:GetChildren()) do
-            local isGui = child:IsA("ScreenGui")
-            local isFolder = child:IsA("Folder")
-
-            if isGui and not whitelist[child.Name] then
-                -- Skip PlayerGui's own built-in children
-                if child.Name:find("Surreal") or child.Name:find("Rayfield")
-                   or child.Name:find("rayfield") or child.Name:find("surreal") then
-                    child:Destroy()
-                    destroyed = destroyed + 1
-                else
-                    -- Extra safety: destroy anything not obviously Roblox
-                    local n = child.Name:lower()
-                    if not n:find("chat") and not n:find("roblox")
-                       and not n:find("playerlist") and not n:find("backpack") then
-                        child:Destroy()
-                        destroyed = destroyed + 1
-                    end
-                end
-            elseif isFolder and (child.Name:find("Rayfield") or child.Name:find("rayfield")) then
-                child:Destroy()
+        for _, target in ipairs(TARGET_NAMES) do
+            local gui = parent:FindFirstChild(target)
+            if gui and (gui:IsA("ScreenGui") or gui:IsA("Folder")) then
+                gui:Destroy()
                 destroyed = destroyed + 1
             end
         end
     end
 
-    print("[Surreal Hub] Destroyed", destroyed, "GUI(s)")
-
-    -- Clear globals so Rayfield can't re-show itself
-    if getgenv then
-        pcall(function()
-            local env = getgenv()
-            env.Rayfield = nil
-            env.rayfield = nil
-        end)
-    end
+    print("[Surreal Hub] Destroyed " .. destroyed .. " Rayfield GUI(s)")
 end)
 
         -- 2. Brief delay before loading Luna
@@ -1833,5 +1807,5 @@ task.spawn(function()
         end
     end)
 
-    warn("[Surreal Hub] inputs may not work, tested and I can't click it so. Try if u can!")
+    warn("[Surreal Hub] Rayfield Gen2 Loaded")
 end)
