@@ -232,10 +232,12 @@ local State = {
 -- WINDOW
 --==================================================
 local Window = Rayfield:CreateWindow({
-    name     = "Surreal Hub (Camp)",
-    subtitle = "by surrre4L",
-    icon     = "rbxassetid://108950683571835",
-    theme    = "default",
+    name          = "Surreal Hub (Camp)",
+    subtitle      = "by surrre4L",
+    icon          = "rbxassetid://108950683571835",
+    sidebarLayout = true,
+    showName      = "Surreal",
+    theme         = "default",
     configuration = {
         autoSave = true,
         autoLoad = true,
@@ -247,24 +249,24 @@ local Window = Rayfield:CreateWindow({
 Utilities.setWindow(Window)
 
 --==================================================
--- TABS (Lucide icons)
+-- TABS (with Lucide asset IDs)
 --==================================================
-local Main         = Window:CreateTab({ name = "Main",       icon = "home" })
-local Challenges   = Window:CreateTab({ name = "Challenges", icon = "trophy" })
-local Morphs       = Window:CreateTab({ name = "Morphs",     icon = "user" })
-local Visuals      = Window:CreateTab({ name = "Visuals",    icon = "eye" })
-local TrollTab     = Window:CreateTab({ name = "Troll",      icon = "zap" })
-local UtilitiesTab = Window:CreateTab({ name = "Utilities",  icon = "wrench" })
+local Main         = Window:CreateTab({ name = "Main",       icon = "rbxassetid://10734943674" })
+local Challenges   = Window:CreateTab({ name = "Challenges", icon = "rbxassetid://10747363809" })
+local Morphs       = Window:CreateTab({ name = "Morphs",     icon = "rbxassetid://10747373176" })
+local Visuals      = Window:CreateTab({ name = "Visuals",    icon = "rbxassetid://10747375132" })
+local TrollTab     = Window:CreateTab({ name = "Troll",      icon = "rbxassetid://10734962068" })
+local UtilitiesTab = Window:CreateTab({ name = "Utilities",  icon = "rbxassetid://10734950309" })
 
 --==================================================
 -- MAIN — VOTES
 --==================================================
-Main:CreateSection({ name = "Votes", icon = "bar-chart" })
+Main:CreateSection({ name = "Votes", icon = "rbxassetid://10734977012" })
 
 Main:CreateToggle({
     name = "Notify Votes",
     description = "notifies you when someone casts a vote",
-    icon = "bell-ring",
+    icon = "rbxassetid://10734981750",
     value = false,
     flag = "NotifyVotes",
     callback = Utilities.safe(function(enabled)
@@ -285,7 +287,7 @@ Main:CreateToggle({
 Main:CreateToggle({
     name = "Announce Votes",
     description = "says every cast vote in the general chat",
-    icon = "megaphone",
+    icon = "rbxassetid://10734943902",
     value = false,
     flag = "ExposeVotes",
     callback = Utilities.safe(function(enabled)
@@ -308,7 +310,7 @@ Main:CreateToggle({
 Main:CreateToggle({
     name = "View Jury Votes",
     description = "notifies when a juror votes a finalist",
-    icon = "users",
+    icon = "rbxassetid://10747373426",
     value = false,
     flag = "ViewJuryVotes",
     callback = Utilities.safe(function(enabled)
@@ -340,7 +342,7 @@ Main:CreateToggle({
 Main:CreateToggle({
     name = "View Exile Votes",
     description = "see who will be voted to exile",
-    icon = "door-open",
+    icon = "rbxassetid://10734982144",
     value = false,
     flag = "ViewExileVotes",
     callback = Utilities.safe(function(enabled)
@@ -363,7 +365,7 @@ Main:CreateToggle({
 Main:CreateToggle({
     name = "Print Votes",
     description = "Logs every votes in console (notify votes only)",
-    icon = "terminal",
+    icon = "rbxassetid://10734982144",
     value = false,
     flag = "PrintVotes",
     callback = Utilities.safe(function(enabled)
@@ -383,12 +385,12 @@ Main:CreateToggle({
 --==================================================
 -- MAIN — STATUE
 --==================================================
-Main:CreateSection({ name = "Statue", icon = "search" })
+Main:CreateSection({ name = "Statue", icon = "rbxassetid://10734943674" })
 
 Main:CreateButton({
     name = "Find Statue (60% Spawn)",
     description = "get the statue",
-    icon = "search",
+    icon = "rbxassetid://10734943674",
     callback = Utilities.safe(function()
         local idols = workspace:FindFirstChild("Idols")
         if not idols then return end
@@ -411,7 +413,7 @@ Main:CreateButton({
 Main:CreateButton({
     name = "Get Statue on Spawn",
     description = "gives you the statue the moment u spawn",
-    icon = "map-pin",
+    icon = "rbxassetid://10734977012",
     callback = Utilities.safe(function()
         local function tryAttach(obj)
             if not obj:IsA("BasePart") or obj.Name ~= "hit" then return end
@@ -438,7 +440,7 @@ Main:CreateButton({
 Main:CreateButton({
     name = "Detect Who has Statue",
     description = "notifies who has the statue",
-    icon = "scan-eye",
+    icon = "rbxassetid://10734942565",
     callback = Utilities.safe(function()
         local season = RS:FindFirstChild("Season")
         if not season or not season:FindFirstChild("Twists") then return end
@@ -456,12 +458,12 @@ Main:CreateButton({
 --==================================================
 -- MAIN — EXTRAS
 --==================================================
-Main:CreateSection({ name = "Extras", icon = "sparkles" })
+Main:CreateSection({ name = "Extras", icon = "rbxassetid://10734966248" })
 
 Main:CreateToggle({
     name = "Auto Detect Round",
     description = "detects the round twist",
-    icon = "refresh-cw",
+    icon = "rbxassetid://10734984606",
     value = false,
     flag = "AutoDetectRound",
     callback = Utilities.safe(function(enabled)
@@ -485,7 +487,7 @@ Main:CreateToggle({
 Main:CreateButton({
     name = "Detect Teamers",
     description = "scans every account if they have friends on the same lobby",
-    icon = "shield-alert",
+    icon = "rbxassetid://10734951173",
     callback = Utilities.safe(function()
         local season = RS:FindFirstChild("Season")
         local playersFolder = season and season:FindFirstChild("Players")
@@ -515,7 +517,7 @@ Main:CreateButton({
 Main:CreateButton({
     name = "Remove Cutscenes",
     description = "just goes to your camera immediately",
-    icon = "video-off",
+    icon = "rbxassetid://10747374721",
     callback = Utilities.safe(function()
         local events = RS:FindFirstChild("Events")
         local camEvent = events and events:FindFirstChild("Camera")
@@ -532,12 +534,12 @@ Main:CreateButton({
 --==================================================
 -- MAIN — COMEBACKS
 --==================================================
-Main:CreateSection({ name = "Comebacks", icon = "rotate-ccw" })
+Main:CreateSection({ name = "Comebacks", icon = "rbxassetid://10747365359" })
 
 Main:CreateButton({
     name = "Comeback as Male",
     description = "rejoin as a blob of male skin",
-    icon = "user",
+    icon = "rbxassetid://10747373176",
     callback = Utilities.safe(function()
         local events = RS:FindFirstChild("Events")
         local buy = events and events:FindFirstChild("Buy")
@@ -548,7 +550,7 @@ Main:CreateButton({
 Main:CreateButton({
     name = "Comeback as Female",
     description = "rejoin as a blob of skin",
-    icon = "user",
+    icon = "rbxassetid://10747373176",
     callback = Utilities.safe(function()
         local events = RS:FindFirstChild("Events")
         local buy = events and events:FindFirstChild("Buy")
@@ -559,12 +561,12 @@ Main:CreateButton({
 --==================================================
 -- MAIN — FLY V3 (Universal Fly Gui V3)
 --==================================================
-Main:CreateSection({ name = "Fly", icon = "plane" })
+Main:CreateSection({ name = "Fly", icon = "rbxassetid://10747384552" })
 
 Main:CreateButton({
     name = "Universal Fly Gui V3",
     description = "loads the Universal Fly Gui V3 script",
-    icon = "plane-takeoff",
+    icon = "rbxassetid://10747384552",
     callback = Utilities.safe(function()
         task.spawn(function()
             local ok, err = pcall(function()
@@ -662,7 +664,7 @@ end
 Main:CreateToggle({
     name = "Global Nameplates",
     description = "see everyone's display names",
-    icon = "id-card",
+    icon = "rbxassetid://10747373426",
     value = false,
     flag = "GlobalNameplates",
     callback = Utilities.safe(function(enabled)
@@ -674,12 +676,12 @@ Main:CreateToggle({
 --==================================================
 -- CHALLENGES
 --==================================================
-Challenges:CreateSection({ name = "Challenges", icon = "target" })
+Challenges:CreateSection({ name = "Challenges", icon = "rbxassetid://10747363809" })
 
 Challenges:CreateButton({
     name = "Win Obby",
     description = "makes you win an Obby",
-    icon = "flag",
+    icon = "rbxassetid://10734977012",
     callback = Utilities.safe(function()
         local assets = workspace:FindFirstChild("Assets")
         if not assets then return end
@@ -696,7 +698,7 @@ Challenges:CreateButton({
 Challenges:CreateToggle({
     name = "Auto Win Obby",
     description = "win every Obby without pressing win Obby",
-    icon = "flag",
+    icon = "rbxassetid://10734977012",
     value = false,
     flag = "AutoWinObby",
     callback = Utilities.safe(function(enabled)
@@ -724,7 +726,7 @@ Challenges:CreateToggle({
 Challenges:CreateButton({
     name = "Remove all Spleef Studs",
     description = "makes Spleef have no studs and everyone falls",
-    icon = "grid-3x3",
+    icon = "rbxassetid://10734965702",
     callback = Utilities.safe(function()
         local root = Utilities.rootPart()
         if not root then return end
@@ -739,7 +741,7 @@ Challenges:CreateButton({
 Challenges:CreateButton({
     name = "Finish Pancake",
     description = "Rapidly clicks your pancake",
-    icon = "cookie",
+    icon = "rbxassetid://10747364761",
     callback = Utilities.safe(function()
         local assets = workspace:FindFirstChild("Assets")
         if not assets then return end
@@ -754,7 +756,7 @@ Challenges:CreateButton({
 Challenges:CreateToggle({
     name = "Cliff Diving ESP",
     description = "automatically find the finish line",
-    icon = "map-pin",
+    icon = "rbxassetid://10734977012",
     value = false,
     flag = "CliffDivingESP",
     callback = Utilities.safe(function(enabled)
@@ -829,7 +831,7 @@ Challenges:CreateToggle({
 Challenges:CreateToggle({
     name = "Auto Get All Coins",
     description = "teleports every coin and gem to you",
-    icon = "coins",
+    icon = "rbxassetid://10734966248",
     value = false,
     flag = "AutoGetCoins",
     callback = Utilities.safe(function(enabled)
@@ -858,7 +860,7 @@ Challenges:CreateToggle({
 Challenges:CreateToggle({
     name = "Answer Math Mania",
     description = "answer every question easily",
-    icon = "calculator",
+    icon = "rbxassetid://10734984606",
     value = false,
     flag = "AnswerMathMania",
     callback = Utilities.safe(function(enabled)
@@ -902,7 +904,7 @@ Challenges:CreateToggle({
 Challenges:CreateSlider({
     name = "Math Mania Setback",
     description = "Adds a delay",
-    icon = "timer",
+    icon = "rbxassetid://10734984606",
     range = { 0, 100 },
     increment = 1,
     value = 0,
@@ -913,7 +915,7 @@ Challenges:CreateSlider({
 Challenges:CreateButton({
     name = "Win Blockpush",
     description = "teleports block to finishing line",
-    icon = "box",
+    icon = "rbxassetid://10734965702",
     callback = Utilities.safe(function()
         local root = Utilities.rootPart()
         if not root then return end
@@ -937,7 +939,7 @@ Challenges:CreateButton({
 Challenges:CreateToggle({
     name = "Dodgeball Invincibility",
     description = "resets you (you do not die)",
-    icon = "shield",
+    icon = "rbxassetid://10734951847",
     value = false,
     flag = "DodgeballInvincibility",
     callback = Utilities.safe(function(enabled)
@@ -967,7 +969,7 @@ Challenges:CreateToggle({
 Challenges:CreateButton({
     name = "Get Dodgeballs",
     description = "get every dodgeball",
-    icon = "circle-dot",
+    icon = "rbxassetid://10747376931",
     callback = Utilities.safe(function()
         local root = Utilities.rootPart()
         if not root then return end
@@ -985,7 +987,7 @@ Challenges:CreateButton({
 Challenges:CreateToggle({
     name = "Paintball Invincibility",
     description = "resets you b4 the game start (you do not die)",
-    icon = "shield",
+    icon = "rbxassetid://10734951847",
     value = false,
     flag = "PaintballInvincibility",
     callback = Utilities.safe(function(enabled)
@@ -1011,12 +1013,12 @@ Challenges:CreateToggle({
             end
         end)
     end),
-})
+}, "PaintballInvincibility")
 
 Challenges:CreateButton({
     name = "Kill Everyone in Swordfight",
     description = "expands hitbox and kills everyone",
-    icon = "sword",
+    icon = "rbxassetid://10734975486",
     callback = Utilities.safe(function()
         local backpack = LocalPlayer:FindFirstChild("Backpack")
         local char = LocalPlayer.Character
@@ -1065,12 +1067,12 @@ Challenges:CreateButton({
 --==================================================
 -- CHALLENGES — RESTARTING
 --==================================================
-Challenges:CreateSection({ name = "Restarting", icon = "refresh-cw" })
+Challenges:CreateSection({ name = "Restarting", icon = "rbxassetid://10734984606" })
 
 Challenges:CreateButton({
     name = "FE Genesis Sniper",
     description = "restarts the finale (server-wide)",
-    icon = "crosshair",
+    icon = "rbxassetid://10734977012",
     callback = Utilities.safe(function()
         Utilities.launchUtility("genesis_sniper")
     end),
@@ -1079,14 +1081,14 @@ Challenges:CreateButton({
 --==================================================
 -- MORPHS — PAID
 --==================================================
-Morphs:CreateSection({ name = "Paid", icon = "crown" })
+Morphs:CreateSection({ name = "Paid", icon = "rbxassetid://10734966248" })
 
 local characterNameBuffer = ""
 
 Morphs:CreateInput({
     name = "Character Name",
     description = "type what you character name",
-    icon = "type",
+    icon = "rbxassetid://10747364761",
     placeholder = "Enter character name...",
     value = "",
     flag = "MorphCharacterName",
@@ -1096,7 +1098,7 @@ Morphs:CreateInput({
 Morphs:CreateButton({
     name = "Buy Character (@60)",
     description = "purchases the custom character",
-    icon = "shopping-cart",
+    icon = "rbxassetid://10734952479",
     callback = Utilities.safe(function()
         if characterNameBuffer == "" then return end
         local events = RS:FindFirstChild("Events")
@@ -1108,7 +1110,7 @@ Morphs:CreateButton({
 Morphs:CreateButton({
     name = "Get Verified Symbol (@60)",
     description = "applies the verified badge to your character name",
-    icon = "badge-check",
+    icon = "rbxassetid://10747374131",
     callback = Utilities.safe(function()
         if characterNameBuffer == "" then return end
         local VERIFIED = "\u{e000}"
@@ -1122,7 +1124,7 @@ Morphs:CreateButton({
 Morphs:CreateButton({
     name = "Server Crash",
     description = "loads the crash payload from GitHub",
-    icon = "bomb",
+    icon = "rbxassetid://10734962068",
     callback = Utilities.safe(function()
         task.spawn(function()
             local url = "https://raw.githubusercontent.com/surrre4l/bruh/main/surrealcrash.lua"
@@ -1146,12 +1148,12 @@ Morphs:CreateButton({
 --==================================================
 -- VISUALS — TYPEFACES
 --==================================================
-Visuals:CreateSection({ name = "Typefaces", icon = "type" })
+Visuals:CreateSection({ name = "Typefaces", icon = "rbxassetid://10747364761" })
 
 Visuals:CreateButton({
     name = "Starborn Typeface",
     description = "starborn try this thing",
-    icon = "star",
+    icon = "rbxassetid://10734966248",
     callback = Utilities.safe(function()
         TypefaceManager.load(
             "starborn", "Starborn", "starborn.ttf", "Starborn.json",
@@ -1164,7 +1166,7 @@ Visuals:CreateButton({
 Visuals:CreateButton({
     name = "Minecraft Typeface",
     description = "minecrafter if you are larper",
-    icon = "blocks",
+    icon = "rbxassetid://10747361919",
     callback = Utilities.safe(function()
         TypefaceManager.load(
             "minecraft", "Minecrafter", "minecrafter.ttf", "Minecrafter.json",
@@ -1177,7 +1179,7 @@ Visuals:CreateButton({
 Visuals:CreateButton({
     name = "Matcha Mint Typeface",
     description = "labubu matcha font",
-    icon = "coffee",
+    icon = "rbxassetid://10734944668",
     callback = Utilities.safe(function()
         TypefaceManager.load(
             "matchamint", "Matcha Mint", "matchamint.ttf", "MatchaMint.json",
@@ -1190,7 +1192,7 @@ Visuals:CreateButton({
 Visuals:CreateButton({
     name = "OG Roblox Typeface",
     description = "classic Roblox font",
-    icon = "square",
+    icon = "rbxassetid://10734965702",
     callback = Utilities.safe(function()
         TypefaceManager.load(
             "ogroblox", "OG Roblox", "ogroblox.ttf", "OGRoblox.json",
@@ -1203,7 +1205,7 @@ Visuals:CreateButton({
 --==================================================
 -- VISUALS — CUSTOM
 --==================================================
-Visuals:CreateSection({ name = "Custom", icon = "palette" })
+Visuals:CreateSection({ name = "Custom", icon = "rbxassetid://10734950309" })
 
 _G.CustomName        = _G.CustomName or ""
 _G.UseCustomName     = _G.UseCustomName or false
@@ -1219,7 +1221,7 @@ task.delay(2, function() nameColorArmed = true end)
 Visuals:CreateInput({
     name = "Character Name",
     description = "replace your character name no tags",
-    icon = "type",
+    icon = "rbxassetid://10747364761",
     placeholder = "Enter character name...",
     value = "",
     flag = "VisualCustomName",
@@ -1232,7 +1234,7 @@ Visuals:CreateInput({
 Visuals:CreateToggle({
     name = "Rainbow Name",
     description = "rainbow rgb in name",
-    icon = "rainbow",
+    icon = "rbxassetid://10747376931",
     value = false,
     flag = "RainbowName",
     callback = Utilities.safe(function(enabled) _G.RainbowMode = enabled end),
@@ -1241,7 +1243,7 @@ Visuals:CreateToggle({
 Visuals:CreateSlider({
     name = "Rainbow Setback",
     description = "how fast rainbow name",
-    icon = "gauge",
+    icon = "rbxassetid://10734984606",
     range = { 0, 100 },
     increment = 1,
     value = 50,
@@ -1252,7 +1254,7 @@ Visuals:CreateSlider({
 Visuals:CreateButton({
     name = "Reset to Team Color",
     description = "resets your name color to original",
-    icon = "rotate-ccw",
+    icon = "rbxassetid://10747365359",
     callback = Utilities.safe(function()
         _G.StaticColorCustom = false
         Utilities.notify("Name Color", "Reverted to team color.", 4)
@@ -1289,7 +1291,7 @@ end)
 --==================================================
 -- TROLL — TARGET FOLLOWER
 --==================================================
-TrollTab:CreateSection({ name = "Target Follower", icon = "crosshair" })
+TrollTab:CreateSection({ name = "Target Follower", icon = "rbxassetid://10734977012" })
 
 local FollowController = {}
 FollowController.__index = FollowController
@@ -1403,7 +1405,7 @@ local targetDropdown
 targetDropdown = TrollTab:CreateDropdown({
     name = "Target Player",
     description = "pick who to follow",
-    icon = "user-search",
+    icon = "rbxassetid://10747373176",
     options = buildOptions(),
     value = nil,
     flag = "TrollTarget",
@@ -1421,7 +1423,6 @@ targetDropdown = TrollTab:CreateDropdown({
 
 TrollTab:CreateButton({
     name = "Refresh Players",
-    icon = "refresh-cw",
     callback = function()
         local opts = buildOptions()
         pcall(function() targetDropdown:Refresh(opts) end)
@@ -1433,7 +1434,7 @@ local followToggle
 followToggle = TrollTab:CreateToggle({
     name = "Follow Target",
     description = "start following the selected player",
-    icon = "user-check",
+    icon = "rbxassetid://10747371901",
     value = false,
     flag = "TrollFollow",
     callback = function(value)
@@ -1481,12 +1482,12 @@ end)
 --==================================================
 -- TROLL — SCRIPTS
 --==================================================
-TrollTab:CreateSection({ name = "Scripts", icon = "file-code" })
+TrollTab:CreateSection({ name = "Scripts", icon = "rbxassetid://10747364761" })
 
 TrollTab:CreateButton({
     name = "Flinger",
     description = "loads the Flinger script from GitHub",
-    icon = "send",
+    icon = "rbxassetid://10734943902",
     callback = function()
         task.spawn(function()
             local url = "https://raw.githubusercontent.com/surrre4l/bruh/main/exe.lua.txt"
@@ -1510,7 +1511,7 @@ TrollTab:CreateButton({
 TrollTab:CreateButton({
     name = "Bang [NEW]",
     description = "loads the Bang script",
-    icon = "zap",
+    icon = "rbxassetid://10747364593",
     callback = function()
         task.spawn(function()
             pcall(function()
@@ -1525,7 +1526,7 @@ TrollTab:CreateButton({
 TrollTab:CreateButton({
     name = "Jerk Off (gives tool)",
     description = "gives you the Jerk tool",
-    icon = "hand",
+    icon = "rbxassetid://10734943902",
     callback = function()
         local plr  = LocalPlayer
         local char = plr.Character or plr.CharacterAdded:Wait()
@@ -1575,7 +1576,7 @@ TrollTab:CreateButton({
 TrollTab:CreateButton({
     name = "Freaky",
     description = "loads the Freaky script",
-    icon = "flame",
+    icon = "rbxassetid://10734962068",
     callback = function()
         task.spawn(function()
             pcall(function()
@@ -1640,19 +1641,19 @@ end
 --==================================================
 -- UTILITIES TAB
 --==================================================
-UtilitiesTab:CreateSection({ name = "Utility", icon = "settings" })
+UtilitiesTab:CreateSection({ name = "Utility", icon = "rbxassetid://10734950309" })
 
 UtilitiesTab:CreateButton({
     name = "Barrier Cleanup",
     description = "removes every barrier",
-    icon = "trash-2",
+    icon = "rbxassetid://10747362241",
     callback = Utilities.safe(function() BarrierManager.clear() end),
 })
 
 UtilitiesTab:CreateToggle({
     name = "Water Walk",
     description = "makes you like jesus",
-    icon = "waves",
+    icon = "rbxassetid://10747376931",
     value = false,
     flag = "WaterWalk",
     callback = Utilities.safe(function(enabled)
@@ -1662,63 +1663,63 @@ UtilitiesTab:CreateToggle({
     end),
 })
 
-UtilitiesTab:CreateSection({ name = "Teleports", icon = "map-pin" })
+UtilitiesTab:CreateSection({ name = "Teleports", icon = "rbxassetid://10734977012" })
 
 UtilitiesTab:CreateButton({
     name = "Spectator Island",
     description = "don't go to loser land",
-    icon = "eye",
+    icon = "rbxassetid://10747375132",
     callback = Utilities.safe(function() Utilities.teleportTo(33, -16, 31) end),
 })
 
 UtilitiesTab:CreateButton({
     name = "Main Island",
     description = "main island",
-    icon = "home",
+    icon = "rbxassetid://10734943674",
     callback = Utilities.safe(function() Utilities.teleportTo(150, -17, -417) end),
 })
 
 UtilitiesTab:CreateButton({
     name = "Exile Island",
     description = "go to exile",
-    icon = "door-open",
+    icon = "rbxassetid://10734982144",
     callback = Utilities.safe(function() Utilities.teleportTo(-116, -14, -166) end),
 })
 
 UtilitiesTab:CreateButton({
     name = "Voting Area",
     description = "go here for voting (remove barrier first)",
-    icon = "check-square",
+    icon = "rbxassetid://10734977012",
     callback = Utilities.safe(function() Utilities.teleportTo(-23, 95, -514) end),
 })
 
 UtilitiesTab:CreateButton({
     name = "Boat",
     description = "do u want to be eliminated",
-    icon = "ship",
+    icon = "rbxassetid://10747364031",
     callback = Utilities.safe(function() Utilities.teleportTo(47, -20, -297) end),
 })
 
 UtilitiesTab:CreateButton({
     name = "Bathroom",
     description = "tps you to bathroom",
-    icon = "toilet",
+    icon = "rbxassetid://10734952942",
     callback = Utilities.safe(function() Utilities.teleportTo(302, -15, -325) end),
 })
 
-UtilitiesTab:CreateSection({ name = "More", icon = "plus-circle" })
+UtilitiesTab:CreateSection({ name = "More", icon = "rbxassetid://10734965702" })
 
 UtilitiesTab:CreateButton({
     name = "Infinite Yield",
     description = "many features and bang",
-    icon = "terminal",
+    icon = "rbxassetid://10734982144",
     callback = Utilities.safe(function() Utilities.launchUtility("infinite_yield") end),
 })
 
 UtilitiesTab:CreateButton({
     name = "Energize R6",
     description = "fe animations hahaha",
-    icon = "sparkles",
+    icon = "rbxassetid://10734966248",
     callback = Utilities.safe(function() Utilities.launchUtility("energize") end),
 })
 
@@ -1732,7 +1733,7 @@ task.spawn(function()
         if SurrealWindow then
             SurrealWindow:Notify({
                 title    = "Surreal Hub Loaded",
-                content  = "Rayfield version is loaded enjoy!",
+                content  = "loaded Rayfield ver..",
                 duration = 6,
             })
         end
